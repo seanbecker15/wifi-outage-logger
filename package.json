@@ -4,7 +4,7 @@
   "description": "Website that allows brothers to report when and where WiFi is down",
   "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js"
   },
   "author": "Sean Becker",
   "license": "MIT",
