@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Sean Becker">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>What's Slow?</title>
+        <style>
+            body {
+                text-align: center;
+                font-family: 'Tahoma', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                }
+
+  
+
+            .button {
+                background-color: white;
+                border: 1px solid black;
+                font-family: 'Tahoma', sans-serif;
+                border-radius: 8px;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                display: inline-flex;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            .button:hover {
+                background-color: grey; /* Green */
+                color: white;
+                border: 1px solid grey;
+            }
+            .button:focus {
+                outline:none;
+            }
+            footer {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                color: rgba(0,0,0,0.5)
+            }
+            p {
+                margin: 2%;
+                font-size: 4em;
+                font-weight: 400;
+                width: 100%;
+            }
+            @media screen and (max-width: 767px) {
+                p {
+                    font-size: 2em;
+                }
+                input[type=text] {
+                    font-size: 2.5rem;
+					min-height: 3rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p style="display: inherit">Which access point are you on?</p>
+            <form class="btn-group" action="" method="POST" style="width: 200px; margin: 0 auto">
+                <button id="btn1" name="btn1" value="btn1" class="button">1E</button>
+                <button id="btn2" name="btn2" value="btn2" class="button">1W</button>
+                <button id="btn3" name="btn3" value="btn3" class="button">2E 2.4GHz</button>
+                <button id="btn4" name="btn4" value="btn4" class="button">2E 5GHz</button>
+                <button id="btn5" name="btn5" value="btn5" class="button">2W 2.4GHz</button>
+                <button id="btn6" name="btn6" value="btn6" class="button">2W 5GHz</button>
+                <button id="btn7" name="btn7" value="btn7" class="button">3E</button>
+                <button id="btn8" name="btn8" value="btn8" class="button">3W</button>
+                <button id="btn9" name="btn9" value="btn9" class="button">Great Room</button>
+                <button id="btn10" name="btn10" value="btn10" class="button">Kitchen</button>
+                <button id="btn11" name="btn11" value="btn11" class="button">Study Room 2.4GHz</button>
+                <button id="btn12" name="btn12" value="btn12" class="button">Study Room 5GHz</button>
+            </form>
+        </div>
+    </body>
+    <footer>
+    </footer>
+</html>
