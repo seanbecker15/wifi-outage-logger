@@ -1,17 +1,34 @@
+
+
 /**
 * GET /
 */
 exports.onSubmit = function(req, res) {
-  console.log(req.body.btn);
+  //console.log(req.body.btn);
+  record(req.body.btn);
   // TODO: Call record function and error check 
   res.render('success');
 };
 
-var date = new Date();
-var time;
-
-function record(btn) {
-  time = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-  console.log(time);
-  console.log(btn);
+function record(access_point) {
+  const { Client } = require('pg');
+  const client = new Client({
+    host: 'localhost',
+    port: 5432,
+    user: 'sean',
+    database: 'wifiproject'
+  });
+  client.connect((err) => {
+    if (err) {
+      console.error('connection error', err.stack);
+    } else {
+      console.log('connected');
+    }
+  });
+  var queryText = 'INSERT INTO wifi(access_point, date_and_time) VALUES($1, $2)';
+  client.query(queryText, [access_point,'now'], (err, res) => {
+    if (err) throw err;
+    console.log('res');
+    client.end();
+  });
 }
