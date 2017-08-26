@@ -16,7 +16,8 @@ function record(access_point) {
     host: process.env.host,
     port: 5432,
     user: process.env.user,
-    database: process.env.database
+    database: process.env.database,
+    password: process.env.password
   });
   client.connect((err) => {
     if (err) {
