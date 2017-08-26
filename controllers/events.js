@@ -13,10 +13,10 @@ exports.onSubmit = function(req, res) {
 function record(access_point) {
   const { Client } = require('pg');
   const client = new Client({
-    host: 'localhost',
+    host: process.env.host,
     port: 5432,
-    user: 'sean',
-    database: 'wifiproject'
+    user: process.env.user,
+    database: process.env.database
   });
   client.connect((err) => {
     if (err) {
