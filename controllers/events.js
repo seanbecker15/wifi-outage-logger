@@ -2,6 +2,7 @@
 * GET /
 */
 exports.onSubmit = function(req, res) {
+  console.log(req.body.btn);
   // TODO: Call record function and error check 
   res.render('success');
 };

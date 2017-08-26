@@ -2,7 +2,10 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan')
 var app = express();
-var EventHandler = require('./controllers/events')
+var EventHandler = require('./controllers/events');
+var bodyParser = require('body-parser'); // allows us to parse req.body in js files
+app.use(bodyParser.json()); // to support JSON bodies
+app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
