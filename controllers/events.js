@@ -9,13 +9,16 @@ exports.onSubmit = function(req, res) {
 };
 
 function record(access_point) {
+  var dotenv = require('dotenv');
+  dotenv.load();
   const { Client } = require('pg');
   const client = new Client({
     host: process.env.host,
     port: 5432,
     user: process.env.user,
     database: process.env.database,
-    password: process.env.password
+    password: process.env.password,
+    ssl: true
   });
   client.connect((err) => {
     if (err) {
