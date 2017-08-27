@@ -16,6 +16,8 @@ app.use(logger('dev'));
 app.use(express.static('.'));
 
 app.get('/', function(req, res) { res.render('index'); });
+app.get('/data', function(req, res) { res.render('data'); });
+app.get('*', function(req, res) { res.render('index'); }); // really should be a 404 page
 app.post('/', EventHandler.onSubmit);
 
 app.listen(app.get('port'), function() {
