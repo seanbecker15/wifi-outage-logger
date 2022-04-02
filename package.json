@@ -1,7 +1,7 @@
 {
   "name": "wifiproj",
   "version": "1.0.0",
-  "description": "Website that allows brothers to report when and where WiFi is down",
+  "description": "Website that allows fraternity members to report when and where WiFi is down",
   "main": "index.js",
   "scripts": {
     "start": "node app.js"
