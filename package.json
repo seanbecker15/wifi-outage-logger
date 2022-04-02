@@ -1,5 +1,5 @@
 {
-  "name": "wifiproj",
+  "name": "wifi-outage-logger",
   "version": "1.0.0",
   "description": "Website that allows fraternity members to report when and where WiFi is down",
   "main": "index.js",
